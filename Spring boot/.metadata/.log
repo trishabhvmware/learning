@@ -1,0 +1,840 @@
+!SESSION 2022-06-18 17:39:44.797 -----------------------------------------------
+eclipse.buildId=4.24.0.I20220607-0700
+java.version=18.0.1.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2022-06-18 17:45:01.288
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-06-18 17:45:01.288
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@702cfbde,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7d3bcd3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-06-18 17:45:01.288
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5dce5c03,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@b76b7d8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.eclipse.epp.mpc.ui 4 0 2022-06-18 18:14:30.517
+!MESSAGE Unexpected exception: Cannot complete request to https://marketplace.eclipse.orginstall/error/report: status code: 400, reason phrase: Bad Request
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot complete request to https://marketplace.eclipse.orginstall/error/report: status code: 400, reason phrase: Bad Request
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.reportInstallError(DefaultMarketplaceService.java:831)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.reportInstallError(CachingMarketplaceService.java:421)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.installErrorReport(MarketplaceDiscoveryStrategy.java:958)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.installErrorReport(MarketplaceCatalog.java:621)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$3.run(MarketplaceWizard.java:854)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.hc.client5.http.HttpResponseException: status code: 400, reason phrase: Bad Request
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:97)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponse(RequestTemplate.java:64)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:46)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:38)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.reportInstallError(DefaultMarketplaceService.java:822)
+	... 5 more
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 0 2022-06-18 18:14:30.518
+!MESSAGE Cannot complete request to https://marketplace.eclipse.orginstall/error/report: status code: 400, reason phrase: Bad Request
+!STACK 0
+org.apache.hc.client5.http.HttpResponseException: status code: 400, reason phrase: Bad Request
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:97)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponse(RequestTemplate.java:64)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:46)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:38)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.reportInstallError(DefaultMarketplaceService.java:822)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.reportInstallError(CachingMarketplaceService.java:421)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.installErrorReport(MarketplaceDiscoveryStrategy.java:958)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.installErrorReport(MarketplaceCatalog.java:621)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$3.run(MarketplaceWizard.java:854)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-06-18 18:15:01.847
+!MESSAGE Connection to https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.apache.xalan_2.7.2.v20201124-1837.jar failed on Connect to https://download.eclipse.org:443 [download.eclipse.org/198.41.30.199] failed: Operation timed out. Retry attempt 0 started
+!STACK 0
+org.apache.hc.client5.http.HttpHostConnectException: Connect to https://download.eclipse.org:443 [download.eclipse.org/198.41.30.199] failed: Operation timed out
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory$1.run(SSLConnectionSocketFactory.java:219)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:216)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1001)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-06-18 18:15:23.236
+!MESSAGE Connection to https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.jsdt.ui_2.1.400.v202204072230.jar failed on Connect to https://download.eclipse.org:443 [download.eclipse.org/198.41.30.199] failed: Operation timed out. Retry attempt 0 started
+!STACK 0
+org.apache.hc.client5.http.HttpHostConnectException: Connect to https://download.eclipse.org:443 [download.eclipse.org/198.41.30.199] failed: Operation timed out
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory$1.run(SSLConnectionSocketFactory.java:219)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:216)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1001)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-06-18 18:15:45.892
+!MESSAGE Connection to https://download.eclipse.org/releases/2022-06/202206151000/features/org.eclipse.wst.web_js_support.feature_3.22.0.v202107272335.jar failed on Connect to https://download.eclipse.org:443 [download.eclipse.org/198.41.30.199] failed: Operation timed out. Retry attempt 0 started
+!STACK 0
+org.apache.hc.client5.http.HttpHostConnectException: Connect to https://download.eclipse.org:443 [download.eclipse.org/198.41.30.199] failed: Operation timed out
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory$1.run(SSLConnectionSocketFactory.java:219)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:216)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1001)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.epp.mpc.ui 4 0 2022-06-18 18:22:10.612
+!MESSAGE Problems occurred while performing provisioning operation: operation plan must be resolved
+!STACK 0
+java.lang.IllegalStateException: operation plan must be resolved
+	at org.eclipse.equinox.internal.p2.ui.ProvUI.toCurrentJREOperation(ProvUI.java:338)
+	at org.eclipse.equinox.internal.p2.ui.ProvUI.toCompabilityWithCurrentJREProvisioningPlan(ProvUI.java:325)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard.lambda$5(MarketplaceWizard.java:876)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2022-06-18 18:22:25.006
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2022-06-18 18:22:25.006
+!MESSAGE session context was:(profile=_Users_trishabh_Downloads_Internship learning_Spring boot_Eclipse.app_Contents_Eclipse, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-06-18 18:22:25.006
+!MESSAGE Failed to transfer artifact canonical: osgi.bundle,org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64,0.1.8.202205271506.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.006
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.006
+!MESSAGE Unable to read repository at https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!STACK 0
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:245)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:324)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:347)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:800)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readFully(SSLSocketInputRecord.java:461)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decodeInputRecord(SSLSocketInputRecord.java:243)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:181)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1503)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1474)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1059)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.hc.core5.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:173)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:135)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:105)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer$1.performFileTransfer(AbstractRetrieveFileTransfer.java:180)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.006
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.006
+!MESSAGE Error while reading from repository: https://espejito.fder.edu.uy/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.006
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.006
+!MESSAGE Error while reading from repository: https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.006
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.006
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.006
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.006
+!MESSAGE Error while reading from repository: https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.006
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.006
+!MESSAGE Error while reading from repository: https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.006
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.006
+!MESSAGE Error while reading from repository: https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.006
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.006
+!MESSAGE Error while reading from repository: https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.006
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.006
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.007
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.007
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.007
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.007
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.007
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.007
+!MESSAGE Error while reading from repository: https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.007
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.007
+!MESSAGE Error while reading from repository: https://ftp.osuosl.org/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.007
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.007
+!MESSAGE Error while reading from repository: https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.007
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.007
+!MESSAGE Error while reading from repository: https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.007
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.007
+!MESSAGE Error while reading from repository: https://espejito.fder.edu.uy/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.007
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.007
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.007
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.007
+!MESSAGE Error while reading from repository: https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.007
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.007
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.007
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.007
+!MESSAGE Error while reading from repository: https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.007
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.007
+!MESSAGE Error while reading from repository: https://espejito.fder.edu.uy/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.007
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.007
+!MESSAGE Error while reading from repository: https://ftp.osuosl.org/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.007
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.007
+!MESSAGE Error while reading from repository: https://ftp.osuosl.org/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.007
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.007
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.007
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.007
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://ftp.osuosl.org/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://ftp.osuosl.org/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://ftp.osuosl.org/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://eclipse.mirror.rafal.ca/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.008
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.008
+!MESSAGE Error while reading from repository: https://ftp.osuosl.org/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.009
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.009
+!MESSAGE Error while reading from repository: https://ftp.osuosl.org/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.009
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.009
+!MESSAGE Error while reading from repository: https://espejito.fder.edu.uy/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.009
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.009
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.009
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.009
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.009
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.009
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.009
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.009
+!MESSAGE Error while reading from repository: https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.009
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.009
+!MESSAGE Error while reading from repository: https://ftp.osuosl.org/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.009
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.009
+!MESSAGE Error while reading from repository: https://espejito.fder.edu.uy/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.009
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.009
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.009
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.009
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.009
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.009
+!MESSAGE Error while reading from repository: https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.009
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.009
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.009
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.009
+!MESSAGE Error while reading from repository: https://ftp.osuosl.org/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.009
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.009
+!MESSAGE Error while reading from repository: https://ftp.osuosl.org/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.009
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.009
+!MESSAGE Error while reading from repository: https://espejito.fder.edu.uy/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.009
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.009
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.009
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.009
+!MESSAGE Error while reading from repository: https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.009
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.009
+!MESSAGE Error while reading from repository: https://espejito.fder.edu.uy/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.009
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.009
+!MESSAGE Error while reading from repository: https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://ftp.osuosl.org/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://espejito.fder.edu.uy/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://ftp.osuosl.org/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://ftp.osuosl.org/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://espejito.fder.edu.uy/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://espejito.fder.edu.uy/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://espejito.fder.edu.uy/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://espejito.fder.edu.uy/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.010
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.010
+!MESSAGE Error while reading from repository: https://ftp.osuosl.org/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://ftp.osuosl.org/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://espejito.fder.edu.uy/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://espejito.fder.edu.uy/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://mirrors.jevincanders.net/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://espejito.fder.edu.uy/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://rhlx01.hs-esslingen.de/pub/Mirrors/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://mirror.csclub.uwaterloo.ca/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://mirror.clarkson.edu/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://ftp.fau.de/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://ftp.halifax.rwth-aachen.de/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://ftp.snt.utwente.nl/pub/software/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://mirror.dkm.cz/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://ftp.acc.umu.se/mirror/eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.011
+!MESSAGE Error while reading from repository: https://eclipse.mirror.garr.it/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.011
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://espejito.fder.edu.uy/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://ftp.linux.org.tr/eclipse//releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://mirror.library.ucy.ac.cy/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://mirror.aarnet.edu.au/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://mirrors.ustc.edu.cn/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://mirrors.neusoft.edu.cn/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://mirror.kakao.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://ftp.jaist.ac.jp/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://ftp.yz.yamagata-u.ac.jp/pub/eclipse//releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://ftp.yz.yamagata-u.ac.jp/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://mirrors.dotsrc.org/eclipse//releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://espejito.fder.edu.uy/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://mirrors.ustc.edu.cn/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://eclipse.mirror.liteserver.nl/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://mirror.ibcp.fr/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://mirror.aarnet.edu.au/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://mirror.tspu.ru/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://mirrors.neusoft.edu.cn/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://ftp.jaist.ac.jp/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://mirror.library.ucy.ac.cy/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://ftp.yz.yamagata-u.ac.jp/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://ftp.yz.yamagata-u.ac.jp/pub/eclipse//releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.012
+!MESSAGE Error while reading from repository: https://mirror.kakao.com/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.012
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.013
+!MESSAGE Error while reading from repository: https://eclipse.mirror.liteserver.nl/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.013
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.013
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.013
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.013
+!MESSAGE Error while reading from repository: https://mirrors.dotsrc.org/eclipse//releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.013
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.013
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.013
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.013
+!MESSAGE Error while reading from repository: https://ftp.linux.org.tr/eclipse//releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.013
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.013
+!MESSAGE Error while reading from repository: https://mirror.ibcp.fr/pub/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.013
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.013
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-06-18 18:22:25.013
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.013
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-06-18 18:22:25.013
+!MESSAGE Error while reading from repository: https://mirror.tspu.ru/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wildwebdeveloper.embedder.node.macos.x86_64_0.1.8.202205271506.jar.
